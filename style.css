@@ -1,0 +1,81 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to left, #a11424, #a8746f);
+}
+
+.container {
+  width: 50%;
+  margin: 150px auto;
+  padding: 10px;
+  text-align: center;
+  display: grid;
+  grid-template: repeat(4, auto) / 1fr;
+  gap: 15px;
+  background-color: #a8746f;
+  border-radius: 12px;
+  box-shadow: 0 0 4px #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+h3 {
+  font-size: 25px;
+  position: relative;
+  padding: 0 0 10px;
+}
+
+h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+}
+
+#quote {
+  color: #222;
+  line-height: 1.5;
+  position: relative;
+}
+
+#quote i {
+  color: yellowgreen;
+}
+
+#get_quote {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 6px;
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#get_quote:hover {
+  opacity: 0.5;
+  color: red;
+}
+
+#get_quote:active {
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(4px);
+}
